@@ -68,7 +68,7 @@ const Loves: React.FC = () => {
 
   const fetchHistory = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/gemini');
+      const res = await fetch('https://chat-backend-mimc.onrender.com/api/gemini');
       const result = await res.json();
       setHistory(result.data || []);
       console.log('Fetched history:', result.data);

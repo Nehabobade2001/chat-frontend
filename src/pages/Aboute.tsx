@@ -80,7 +80,7 @@ const HistoryCard: React.FC<Props> = ({ item, onDelete }) => {
         <span>{new Date(item.createdAt).toLocaleString()}</span>
         <div className="space-x-2">
           <a
-            href={`http://localhost:5000/api/gemini/preview/${item._id}`}
+            href={`https://chat-backend-mimc.onrender.com/api/gemini/preview/${item._id}`}
             target="_blank"
             rel="noreferrer"
             className="text-blue-500 hover:underline"
