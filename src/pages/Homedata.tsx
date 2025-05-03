@@ -52,7 +52,7 @@ const LandingPageGenerator: React.FC = () => {
 
   const fetchHistory = async () => {
     try {
-      const res = await axios.get<{ data: CodeEntry[] }>('http://localhost:5000/api/gemini');
+      const res = await axios.get<{ data: CodeEntry[] }>('https://chat-backend-mimc.onrender.com/api/gemini');
       const sorted = res.data.data.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
       const cleaned = sorted.map(item => ({ ...item, code: cleanCode(item.response) }));
       setHistory(cleaned);
@@ -74,7 +74,7 @@ const LandingPageGenerator: React.FC = () => {
 
     try {
       const finalPrompt = `Generate a complete, responsive, professional landing page with embedded HTML, CSS (inside <style>), and JavaScript (inside <script>) all in one file. Include interactivity using JS. Prompt: ${prompt}`;
-      const res = await axios.post('http://localhost:5000/api/gemini', { prompt: finalPrompt });
+      const res = await axios.post('https://chat-backend-mimc.onrender.com/api/gemini', { prompt: finalPrompt });
       const response = res.data?.data?.response || '';
       const code = cleanCode(response);
 
@@ -106,7 +106,7 @@ const LandingPageGenerator: React.FC = () => {
 
   const handleDelete = async (id: string) => {
     try {
-      await axios.delete(`http://localhost:5000/api/gemini/${id}`);
+      await axios.delete(`https://chat-backend-mimc.onrender.com/api/gemini/${id}`);
       const updated = history.filter(chat => chat._id !== id);
       setHistory(updated);
       if (selectedChat?._id === id) {

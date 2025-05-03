@@ -24,12 +24,12 @@ const App = () => (
       <BrowserRouter>
         <Routes>
 
-          <Route path='/signup' element={<SignUpPage/>} />
+          {/* <Route path='/signup' element={<SignUpPage/>} /> */}
           <Route path="/" element={<Homedata />} />
-          <Route path="/prompt"element={<Prompt/>}  />
+          {/* <Route path="/prompt"element={<Prompt/>}  />
           <Route path="/support" element={<Support/>}/>
           <Route path="/preview" element={<ChatWindo/>}/>
-          <Route path="/loves" element={<Loves/>}/>
+          <Route path="/loves" element={<Loves/>}/> */}
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
