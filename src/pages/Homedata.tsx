@@ -58,7 +58,6 @@ const LandingPageGenerator: React.FC = () => {
       setHistory(cleaned);
       if (cleaned.length > 0) setSelectedChat(cleaned[0]);
     } catch (err) {
-      console.error(err);
       setError('Failed to fetch history.');
     }
   };

@@ -35,7 +35,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api/gemini',
+  baseURL: 'https://chat-backend-mimc.onrender.com/api/gemini',
 });
 
 export default api;
