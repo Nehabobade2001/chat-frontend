@@ -38,7 +38,7 @@ type Message = {
 
 
 // const API_BASE_URL = "http://localhost:5000/api/gemini/generate";
- const API_BASE_URL ="https://sharma-chat-bot-production.up.railway.app"
+ const API_BASE_URL ="https://sharma-chat-bot-production.up.railway.app/api/gemini/generate"
 
 const Homedata: React.FC = () => {
   const [history, setHistory] = useState<PromptItem[]>([]);
@@ -154,7 +154,7 @@ const Homedata: React.FC = () => {
 
     try {
       const response = await axios.post(
-        "https://sharma-chat-bot-production.up.railway.app",
+        "https://sharma-chat-bot-production.up.railway.app/api/gemini/generate",
         { prompt }
       );
       const rawText =
