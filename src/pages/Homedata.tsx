@@ -37,7 +37,8 @@ type Message = {
 };
 
 
-const API_BASE_URL = "http://localhost:5000/api/gemini/generate";
+// const API_BASE_URL = "http://localhost:5000/api/gemini/generate";
+ const API_BASE_URL ="https://sharma-chat-bot-production.up.railway.app"
 
 const Homedata: React.FC = () => {
   const [history, setHistory] = useState<PromptItem[]>([]);
